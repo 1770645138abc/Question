@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keyword" content="">
+    <link rel="shortcut icon" href="ifavicon.ico" />
+    <title>Welcome to QuestionBank</title>
+    <style>
+        a {
+            display: block;
+            text-decoration: none;
+            color: black;
+        }
+
+        p {
+            border: 1px solid pink;
+        }
+
+        .clearfix:after {
+            content: '';
+            display: block;
+            height: 0;
+            visibility: hidden;
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#weizhi">1.未知宽高div水平垂直居中</a>
+    <a href="#qiantao">2.嵌套块元素塌陷</a>
+    <a href="#yuyi">3.HTML语义化</a>
+    <a href="#float">4.清除浮动</a>
+    <a href="#zuoyongyu">5.作用域</a>
+    <a href="#yulian">6.作用域链</a>
+    <a href="#jiexi">7.预解析（p142预解析案例）</a>
+    <a href="#dui">8.对象</a>
+    <a href="#nullu">9.null和undefined区别</a>
+    <a href="#bian">10.变量知识</a>
+    <a href="#sh">11.数据类型有哪些</a>
+    <a href="#shq">12.数值之间转换</a>
+    <a href="#tanthis">13.关于this</a>
+    <a href="#smw">14.什么是window对象? 什么是document对象?</a>
+    <a href="#shiwu">15.如何判断一个对象是否属于某个类</a>
+    <a href="#shiliu">16.new操作符具体干了什么呢?</a>
+    <a href="#shiqi">17.JS延迟加载的方式有哪些？</a>
+    <a href="#shiba">18.什么是模块化？</a>
+    <a href="#shijiu">19.H5新增标签 </a>
+    <a href="#ershi">20.CSS3新增标签</a>
+    <a href="#ershiyi">21.网站TDK三大标签SEO优化</a>
+    <a href="#ershier">22.常用模块类名命名</a>
+    <a href="#ershisan">23.根据seo制作logo</a>
+    <a href="#ershisi">24.input去outline和border</a>
+    <a href="#ershiwu">25.边框重合</a>
+    <a href="#ershiliu">26.多余部分一行省略</a>
+    <a href="#ershiqi">27.对象的实例化</a>
+
+
+
+
+
+
+    <p id="weizhi">
+        <img src="images/QQ截图20211210103059.png" alt="">
+        <img src="images/QQ截图20211210105211.png" alt="">
+    </p>
+    <p id="qiantao"><img src="images/QQ截图20211210161727.png" alt=""></p>
+    <p id="yuyi">让标签有自己的含义。如p标签的含义是：段落。</p>
+    <p id="float">
+        1.额外标签法:在浮动一行最后添加一个块级元素（盒子） css写clear:both;<br>
+        2.父级添加overflow:hidden;属性<br>
+        3.父级添加after伪元素<br>
+        4.父级添加双伪元素<br>
+        <img src="images/QQ截图20211210180026.png" alt=""><br>
+        <img src="images/QQ截图20211210180338.png" alt="">
+    </p>
+    <p id="zuoyongyu">代码名在某个范围内起作用和效果，（提高程序可靠性，减少命名冲突）</p>
+    <p id="yulian">根据在内部函数可以访问外部函数变量的这种机制，用链式查找决定哪些数据能够被内部函数访问，就称为作用域链</p>
+    <p id="jiexi">预解析分为 变量预解析 和 函数预解析 （就是把当前所有的变量声明（函数声明）提升到当前作用域的最前面）</p>
+    <p id="dui">对象是一组无序的相关属性和方法的集合</p>
+    <p id="nullu">1.null定义了，是一个表示"空"的对象，转为数值时为0<br>
+        2.undefined未定义，转为数值时为NaN</p>
+    <p id="bian"><img src="../题库网页/images/Snipaste_2022-01-09_17-13-49.png" alt=""><br>
+    <img src="../题库网页/images/Snipaste_2022-01-09_17-16-36.png" alt=""></p>
+    <p id="sh">数字型Number 字符串型String 布尔型Boolean Null Undefined 对象型Object</p>
+    <p id="shq">转字符串型 1.利用String 2.加号拼接字符串''+num<br>
+        转数字型 1.取整parseInt 2.取小数parseFloat 3.利用Number<br>
+        转布尔型 1.利用Boolean</p>
+    <p id="tanthis">1.this总是指向函数的直接调用者（而非间接调用者）<br>
+        2.如果有new关键字，this指向new出来的那个对象<br>
+        3.在事件中，this指向目标元素，特殊的是IE的attachEvent中的this总是指向全局对象window。</p>
+    <p id="smw">window对象代表浏览器中打开的一个窗口。document对象代表整个html文档。实际上，document对象是window对象的一个属性。</p>
+    <p id="shiwu">使用instanceof 即if(a instanceof Person){alert('yes');}</p>
+    <p id="shiliu">1.创建一个空对象，并且 this 变量引用该对象，同时还继承了该函数的原型。<br>
+        2.属性和方法被加入到 this 引用的对象中。<br>
+        3.新创建的对象由 this 所引用，并且最后隐式的返回 this 。</p>
+    <p id="shiqi">
+        1.defer：延迟脚本。整个页面都渲染完毕后再执行。按次序执行。<br>
+        2.async：异步脚本。下载完立即执行。不按次序执行.。
+    </p>
+    <p id="shiba">将一个项目按照功能划分，一个功能一个模块。</p>
+    <p id="shijiu">H5:1.新增的语义化标签<img src="images/QQ截图20211222152415.png" alt=""><br>
+        2.新增音频标签audio(拓展autoplay,loop,controls是其中的重点)<br>视频标签video(拓展autoplay,loop,muted是其中的重点)<br>
+        3.新增input表单，input type="email"（重点number，tel，search，email，date）<br>
+        4.新增的表单属性，required（不能为空），multiple（多选文件提交，和file搭配），placeholder（表单提示信息），autofocus（自动聚焦），autocomplete（记录输入历史）一般改为off
+    </p>
+    <p id="ershi">1.新增了一些属性选择器，如可以选择属性=值的某些元素 E[att="value"];（类选择器，属性选择器，伪类选择器权重都是10）<br>
+        2.新增了一些结构伪类选择器，如E:nth-child(n) n可以是数字，关键字even或odd，n+5（包括5）-n+5（包括5）<br>
+        3.新增了伪元素选择器::brfore和::after(属于行内元素，不能直接改样式，在文档树中找不到，必须有content属性，伪元素和标签选择器一样，权重是1)<br>
+        4.新增了盒模型box-sizing:border-box;(padding和margin不会撑大盒子了)<br>
+        5.滤镜，filter: blur(5px);图片模糊处理。<br>
+        6.calc函数 width: calc（100%-80px）<br>
+        7.transition过渡（all .5s）。
+    </p>
+    <p id="ershiyi">1.title(京东(JD.COM)-正品低价、品质保障、配送及时、轻松购物！) 2.description(meta name="description" content="")
+        3.keyword(meta name="keyword" content="")</p>
+    <p id="ershier"><img src="images/Snipaste_2021-12-27_17-26-56.png" alt=""></p>
+    <p id="ershisan"><img src="images/Snipaste_2021-12-28_17-30-53.png" alt=""><br>
+        1.放H1; 2.H1里面放a(a是行内元素，设宽高时需转换为块元素)，logo背景图给a 3.a里面放文字（font-size:0;）4.a里面放title
+    </p>
+    <p id="ershisi">1.border:0; 2.outline:none;</p>
+    <p id="ershiwu">1.给margin设置-1px 2.table的话border-collapse: collapse;</p>
+    <p id="ershiliu">overflow: hidden;<br>
+        white-space: nowrap;<br>
+        text-overflow: ellipsis;</p>
+    <p id="ershiqi">利用构造函数创建对象的过程，称为对象的实例化</p>
+
+
+    <script defer async src=""></script>
+</body>
+
+</html>

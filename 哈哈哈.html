@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .home {
+            width: 200px;
+            height: 200px;
+            border: 1px solid pink;
+            margin: 100px auto;
+            overflow: hidden;
+        }
+
+        .and {
+            width: 400px;
+            height: 200px;
+            overflow: hidden;
+            transition: all .3s;
+        }
+
+        .red {
+            float: left;
+            width: 200px;
+            height: 200px;
+            background-color: peru;
+        }
+
+        .blue {
+            float: left;
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+        }
+
+        .and:hover {
+            transform: translate(-200px, 0);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="home">
+        <div class="and">
+            <div class="red"></div>
+            <div class="blue"></div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <script>
+        function Star(name, age, sex) {
+            this.name = name;
+            this.age = age;
+            this.sex = sex;
+            this.sing = function (sang) {
+                console.log(sang);
+            }
+        }
+        var ldh = new Star('刘德华', 18, '男');
+        console.log(ldh.name);
+        console.log(ldh['sex']);
+        ldh.sing('冰雨');
+        var zxy = new Star('张学友', 20, '火星人');
+        console.log(zxy.age);
+        zxy.sing('开心');
+    </script>
+</body>
+
+</html>
