@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <meta name="description" content="">
     <meta name="keyword" content="">
     <link rel="shortcut icon" href="bitbug_favicon.ico" />
@@ -26,6 +27,26 @@
             height: 0;
             visibility: hidden;
             clear: both;
+        }
+
+        .style_color {
+            color: red;
+        }
+
+        移动端特殊样式解决方案 a {
+            /* 清楚高亮 */
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        input {
+            /* 清除input外观 */
+            -webkit-appearance: none;
+        }
+
+        img,
+        a {
+            /* 清除长按出菜单 */
+            -webkit-touch-callout: none;
         }
     </style>
 </head>
@@ -58,6 +79,26 @@
     <a href="#ershiwu">25.边框重合</a>
     <a href="#ershiliu">26.多余部分一行省略</a>
     <a href="#ershiqi">27.对象的实例化</a>
+    <a href="#ershiba">28.流程控制</a>
+    <a href="#ershijiu">29.循环</a>
+    <a href="#sanshi">30.continue和break区别</a>
+    <a href="#sanshiyi">31.数组知识</a>
+    <a href="#sanshier">32.声明变量不赋值为什么回返回undefined</a>
+    <a href="#sanshisan">33.block、inline、inline-block的区别。</a>
+    <a href="#sanshisi">34.box-sizing的语法和基本用处</a>
+    <a href="#sanshiwu">35.meta视口标签</a>
+    <a href="#sanshiliu">36.移动端知识</a>
+    <a href="#sanshiqi">37.什么是函数</a>
+    <a href="#sanshiqi">38.什么是形参和实参</a>
+    <a href="#sanshijiu">39.arguments知识</a>
+    <a href="#sishi">40.冒泡排序</a>
+    <a href="#sishiyi">41.函数的两种声明方式</a>
+
+
+
+
+
+
 
 
 
@@ -65,11 +106,12 @@
 
 
     <p id="weizhi">
-        <img src="images/QQ截图20211210103059.png" alt="">
-        <img src="images/QQ截图20211210105211.png" alt="">
+        1.父元素固定宽高，子元素设置position: absolute，margin：auto <br>
+        2.<img src="images/QQ截图20211210103059.png" alt="">
+        3.<img src="images/QQ截图20211210105211.png" alt="">
     </p>
     <p id="qiantao"><img src="images/QQ截图20211210161727.png" alt=""></p>
-    <p id="yuyi">让标签有自己的含义。如p标签的含义是：段落。</p>
+    <p id="yuyi">正确的标签里填入正确的内容，让页面的内容结构更加简单易懂，便于搜索引擎解析，便于阅读维护和理解</p>
     <p id="float">
         1.额外标签法:在浮动一行最后添加一个块级元素（盒子） css写clear:both;<br>
         2.父级添加overflow:hidden;属性<br>
@@ -85,7 +127,8 @@
     <p id="nullu">1.null定义了，是一个表示"空"的对象，转为数值时为0<br>
         2.undefined未定义，转为数值时为NaN</p>
     <p id="bian"><img src="../题库网页/images/Snipaste_2022-01-09_17-13-49.png" alt=""><br>
-    <img src="../题库网页/images/Snipaste_2022-01-09_17-16-36.png" alt=""></p>
+        <img src="../题库网页/images/Snipaste_2022-01-09_17-16-36.png" alt="">
+    </p>
     <p id="sh">数字型Number 字符串型String 布尔型Boolean Null Undefined 对象型Object</p>
     <p id="shq">转字符串型 1.利用String 2.加号拼接字符串''+num<br>
         转数字型 1.取整parseInt 2.取小数parseFloat 3.利用Number<br>
@@ -100,7 +143,7 @@
         3.新创建的对象由 this 所引用，并且最后隐式的返回 this 。</p>
     <p id="shiqi">
         1.defer：延迟脚本。整个页面都渲染完毕后再执行。按次序执行。<br>
-        2.async：异步脚本。下载完立即执行。不按次序执行.。
+        2.async：异步脚本。下载完立即执行。不按次序执行。
     </p>
     <p id="shiba">将一个项目按照功能划分，一个功能一个模块。</p>
     <p id="shijiu">H5:1.新增的语义化标签<img src="images/QQ截图20211222152415.png" alt=""><br>
@@ -108,13 +151,24 @@
         3.新增input表单，input type="email"（重点number，tel，search，email，date）<br>
         4.新增的表单属性，required（不能为空），multiple（多选文件提交，和file搭配），placeholder（表单提示信息），autofocus（自动聚焦），autocomplete（记录输入历史）一般改为off
     </p>
-    <p id="ershi">1.新增了一些属性选择器，如可以选择属性=值的某些元素 E[att="value"];（类选择器，属性选择器，伪类选择器权重都是10）<br>
+    <p id="ershi"><img src="images/Snipaste_2022-01-11_13-22-17.png" alt=""><br>
+        1.新增了一些属性选择器，如可以选择属性=值的某些元素 E[att="value"];（类选择器，属性选择器，伪类选择器权重都是10）<br>
         2.新增了一些结构伪类选择器，如E:nth-child(n) n可以是数字，关键字even或odd，n+5（包括5）-n+5（包括5）<br>
         3.新增了伪元素选择器::brfore和::after(属于行内元素，不能直接改样式，在文档树中找不到，必须有content属性，伪元素和标签选择器一样，权重是1)<br>
         4.新增了盒模型box-sizing:border-box;(padding和margin不会撑大盒子了)<br>
         5.滤镜，filter: blur(5px);图片模糊处理。<br>
         6.calc函数 width: calc（100%-80px）<br>
-        7.transition过渡（all .5s）。
+        7.transition过渡（all .5s）。<br>
+        8.新增了2D 转换（transform）有（移动translate 旋转rotate 缩放scale）<br>
+        9.新增了动画<img src="../题库网页/images/Snipaste_2021-12-28_17-30-59.png" alt=""><br>
+        不包含animation-play-state: paused;<br>
+        10.新增了3D转换transform: translate3d(X,Y,Z)。 透视（也叫视距，眼睛到屏幕的距离是 值，离屏幕越近看到越大 近大远小）perspective 写到被观察元素的父盒子上<br>
+        开启3D transform-style: preserve-3d;(写给父盒子影响子盒子)<br>
+        11.新增了浏览器私有前缀<br>
+        -moz-: firefox <br>
+        -ms-: IE <br>
+        -webkit-: safari chromo<br>
+        -o-: Opera
     </p>
     <p id="ershiyi">1.title(京东(JD.COM)-正品低价、品质保障、配送及时、轻松购物！) 2.description(meta name="description" content="")
         3.keyword(meta name="keyword" content="")</p>
@@ -128,6 +182,74 @@
         white-space: nowrap;<br>
         text-overflow: ellipsis;</p>
     <p id="ershiqi">利用构造函数创建对象的过程，称为对象的实例化</p>
+    <p id="ershiba">流程控制就是控制代码按照什么结构顺序执行<br>
+        流程控制主要有<br>1.顺序结构(平时写的代码)<br> 2.分支结构(One. <span class="style_color">if分支</span>{1.if分支 2.if else双分支 3.if else if
+        多分支}
+        Two.<span class="style_color">switch分支</span>)<br> 3.循环结构
+    </p>
+    <p id="ershijiu">1.for循环 2.while循环 3.do while循环</p>
+    <p id="sanshi"><img src="../题库网页/images/Snipaste_2022-01-12_07-39-09.png" alt=""></p>
+    <p id="sanshiyi">数组是一组数据的集合 将一组数据储存在单个变量名下<br>
+        for里面的i是计数器，在遍历中当索引号使用，for里面的数组元素是arr[i]<br>
+        新增数组元素（数组扩容）:1.修改length长度 2.修改索引号，追加数组元素（arr[3] = 'pink'）<br><img src="images/Snipaste_2022-01-13_16-35-34.png"
+            alt=""><br>
+        遍历数组<br>
+        <img src="images/Snipaste_2022-01-13_16-19-56.png" alt=""><br>
+        <img src="images/QQ图片20220113170456.png" alt=""><br>
+        翻转数组<br>
+        <img src="../题库网页/images/Snipaste_2022-01-17_16-59-45.png" alt=""><br>
+        冒泡排序<br>
+        <img src="images/Snipaste_2022-01-17_16-58-43.png" alt=""><br>
+        <img src="images/Snipaste_2022-01-17_17-11-11.png" alt=""><br>
+    </p>
+    <p id="sanshier">当声明了变量没有赋值时，就相当于给变量赋了undefined值。</p>
+    <p id="sanshisan">
+        <span class="style_color">块元素</span><br>
+        1.独占一行，宽度是父级宽度的100%。<br>
+        2.宽高内外边距都可以控制。<br>
+        3.里面可以放行内和块级元素。<br>
+
+        <span class="style_color">行内元素</span><br>
+        1.相邻行内元素在一行上。默认宽度是他本身内容宽度。<br>
+        2.宽高直接设置无效。<br>
+        3.里面只可以放文本和其他行内元素。<br>
+        <span class="style_color">行内块元素</span>（同时具有块元素和行内元素的特点）<br>
+        1.相邻元素在一行，宽度是本身内容宽度。<br>
+        2.宽高内外边距都可以控制。<br>
+    </p>
+    <p id="sanshisi">语法 box-sizing: content-box（默认）/border-box，用处：添加内外边距不会撑大盒子</p>
+    <p id="sanshiwu">
+        meta name="viewport"
+        content="width=device-width, initial-scale=1.0, <span class="style_color">maximum-scale=1.0, minimum-scale=1.0,
+            user-scalable=no"</span><br><img src="images/Snipaste_2022-01-13_15-39-01.png" alt=""><br>
+        附加（去除input边框 border: 0; 去除轮廓 outline: none;）
+    </p>
+    <p id="sanshiliu">移动端主流方案<br>
+        one单独制作移动端（1.流式布局）（2.flex布局）（3.less+rem+媒体查询布局）（4.混合布局）<br>
+        two响应式页面</p>
+
+    <p id="sanshiqi">函数是封装了一段可以重复调用执行的代码块<br>
+        函数的作用是大量代码重复使用<br>
+        调用函数是函数名+小括号<br>
+        函数封装是将函数整合成一个整体<br>
+        <img src="images/Snipaste_2022-01-17_19-33-16.png" alt=""><br>
+        <img src="images/Snipaste_2022-01-17_19-36-53.png" alt=""><br>
+        1.函数中有rerurn就返回return后面的值<br>
+        2.如果没有就返回undefined<br>
+        <img src="images/Snipaste_2022-01-17_19-38-42.png" alt=""><br>
+    </p>
+    <p id="sanshiba">形参是形式上的参数，在函数定义的小括号里的，起初并不知道里面是什么值(形参可以看作是不用声明的变量)<br>
+        实参是实际的参数，在函数调用的小括号里，并将里面的值传给形参<br>
+    </p>
+    <p id="sanshijiu">arguments是 只有函数有的内置对象
+        里面存储了所有传递过来的实参
+        不知道用户穿多少实参的时候用arguments
+    </p>
+    <p id="sishi"><img src="images/QQ截图20220118153040.png" alt=""></p>
+    <p id="sishiyi"><img src="images/Snipaste_2022-01-18_16-54-47.png" alt=""></p>
+
+
+
 
 
     <script defer async src=""></script>
